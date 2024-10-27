@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main class="max-w-screen-xl px-4 py-4 mx-auto">
+        <!-- Navbar -->
+        <nav class="flex flex-row  mx-auto items-center justify-between px-4 py-4 mb-10 border-b-2 border-gray-300">
+            <div class="flex items-center space-x-12">
+                <!-- Nav logo -->
+                <div class="text-purple-900 text-2xl font-black">
+                    NFTERS
+                </div>
+                <!-- Nav items -->
+                <div class="hidden flex-col  w-full md:flex">
+                    <ul class="flex flex-row space-x-10">
+                        <li class="text-black hover:underline cursor-pointer">
+                            <a href="#">
+                                Marketplace</a>
+                        </li>
+
+                        <li class="text-black hover:underline cursor-pointer">
+                            <a href="#">
+                                Resource</a>
+                        </li>
+
+                        <li class="text-black hover:underline cursor-pointer">
+                            <a href="#">
+                                About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-5">
+                <!-- search box -->
+                <div class="relative">
+                    <input type="text"
+                        class="py-1 px-3 min-w-8 min-h-10 border border-gray-300 rounded-full focus-visible: outline-black"
+                        placeholder="Search">
+                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+
+                </div>
+
+                <!-- buttons -->
+                <div class="hidden flex-row space-x-4 md:flex">
+                    <button class="bg-purple-900 text-white py-2 px-7 hover:bg-purple-700 rounded-3xl duration-150">
+                        Upload
+                    </button>
+
+                    <button
+                        class="border-2 border-purple-900 text-purple-900 flex-shrink-0 py-2 px-7 hover:bg-purple-700 rounded-3xl hover:bg-purple-900 hover:text-white duration-150">
+                        Connect Wallet
+                    </button>
+                </div>
+            </div>
+            <!-- hamburger button -->
+            <div id="menu-toggle" class="border border-gray-300 p-2 rounded cursor-pointer  md:hidden">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12"></line>
+                    <line x1="4" x2="20" y1="6" y2="6"></line>
+                    <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+            </div>
+        </nav>
+
+        <!-- section head -->
+        <section class="flex flex-col items-center justify-center px-6 mb-20 space-y-8 md:flex-row md:space-x-8">
+            <div class="md:order-2">
+                <img src="images/hero.webp" alt="">
+            </div>
+
+            <div class="flex flex-col items-center justify-center md:order-1 space-y-10 md:items-start">
+                <h1 class="font-sans text-black font-bold text-4xl text-center uppercase md:text-left">Discover, and
+                    collect Digital Art NFTs</h1>
+                <p class="text-muted text-lg text-gray-700 text-center md:text-left">
+                    Digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, Sell, and discover
+                    exclusive digital assets.
+                </p>
+                <button
+                    class="bg-purple-900 rounded-full text-2xl text-white px-8 py-2 hover:bg-purple-700 duration-150">
+                    Explore now
+                </button>
+                <div class="flex items-center justify-between space-x-10">
+                    <div>
+                        <h1 id="artworkCount" class="uppercase text-3xl font-extrabold text-black">0</h1>
+                        <p class="text-gray-500 text-xl text-center">Artwork</p>
+                    </div>
+
+                    <div>
+                        <h1 id="auctionCount" class="uppercase text-3xl text-black font-extrabold">0</h1>
+                        <p class="text-gray-500 text-xl text-center">Auction</p>
+                    </div>
+
+                    <div>
+                        <h1 id="artistCount" class="uppercase text-3xl text-black font-extrabold">0</h1>
+                        <p class="text-gray-500 text-xl text-center">Artist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section futures -->
+        <section
+            class="flex flex-col space-y-8 px-6 py-12 mb-10 bg-[#D9E0EC33] rounded-lg shadow-sm items-center justify-center md:flex-row md:space-x-5 md:px-8">
+            <div>
+                <h1 class="text-black font-extrabold uppercase text-xl text-center">The amazing NFT art of the world
+                    here</h1>
+            </div>
+
+            <div class="flex flex-row ">
+                <div><img alt="" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="pr-2 mt-1"
+                        style="color:transparent" src="images/card-tick-1 1.webp"></div>
+                <div>
+                    <h1 class="text-black font-bold uppercase text-lg">
+
+                        Fast Transaction
+                    </h1>
+                    <p class="text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus imperdiet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-row ">
+                <div><img alt="" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="pr-2 mt-1"
+                        style="color:transparent" src="images/chart-square 2.webp"></div>
+                <div>
+                    <h1 class="text-black font-bold uppercase text-lg">
+
+
+                        Growth Transaction
+                    </h1>
+                    <p class="text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam etiam viverra tellus imperdiet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- section cards -->
+        <section class="flex flex-col space-x-6 space-y-14 my-8 justify-center lg:flex-row">
+            <!-- cards left side -->
+            <div
+                class="flex flex-col items-center justify-center md:space-x-16 md:border-r-2 border-gray-400 lg:flex-row md:pr-6">
+                <!-- card left side -->
+                <div class="flex flex-col flex-shrink-0 justify-end lg:justify-center">
+                    <!-- image -->
+                    <div class="shadow-lg">
+                        <img src="images/unsplash1.webp" alt="">
+                    </div>
+                    <!-- footer user -->
+                    <div class="flex flex-row justify-between py-4">
+                        <!-- user -->
+                        <div class="flex flex-row space-x-2">
+                            <!-- user profile -->
+                            <div class="">
+                                <img src="images/profile.webp" alt="" width="48px" height="48px">
+                            </div>
+                            <!-- name of the nfc -->
+                            <div>
+                                <p class="font-sans font-semibold text-xl">The Futr Abstr</p>
+                                <p class="font-sans text-xs text-prime mt-1">10 in the stock</p>
+                            </div>
+                        </div>
+
+                        <!-- bid -->
+                        <div>
+                            <p>Highest bid</p>
+                            <p class="font-sans text-sm text-[#3A3A3A] font-semibold mt-1"><svg stroke="currentColor"
+                                    fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                    </path>
+                                </svg> 0.25 ETH</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- small cards right side -->
+                <div class="flex flex-col items-center justify-center space-y-6  flex-shrink-0 md:items-start">
+                    <!-- small card -->
+                    <div class="flex flex-row space-x-3 space-y-2 mx-auto">
+                        <!-- left splash -->
+                        <div>
+                            <img src="images/unsplash2.webp" alt="">
+                        </div>
+                        <!--  right info -->
+                        <div class="flex flex-col">
+                            <div>
+                                <p class="font-sans text-xl font-semibold">The Futr Abstr</p>
+                            </div>
+                            <div class="flex flex-row">
+                                <div>
+                                    <img src="images/profile.webp" alt="" width="30px" height="30px">
+                                </div>
+                                <div class="border border-[#00AC4F] rounded py-1 px-2 mx-2">
+                                    <p class="text-[#00AC4F] font-sans font-semibold text-xs  "><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 320 512" class="inline-block" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                            </path>
+                                        </svg> 0.25 ETH</p>
+                                </div>
+                                <div class="text-gray-500 text-sm flex items-center">
+                                    <p>1 of 8</p>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <button class="border-2 border-purple-900 rounded-full p-3">
+                                    Place a bid
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- small card -->
+                    <div class="flex flex-row space-x-3 space-y-2 mx-auto">
+                        <!-- left splash -->
+                        <div>
+                            <img src="images/unsplash2.webp" alt="">
+                        </div>
+                        <!--  right info -->
+                        <div class="flex flex-col">
+                            <div>
+                                <p class="font-sans text-xl font-semibold">The Futr Abstr</p>
+                            </div>
+                            <div class="flex flex-row">
+                                <div>
+                                    <img src="images/profile.webp" alt="" width="30px" height="30px">
+                                </div>
+                                <div class="border border-[#00AC4F] rounded py-1 px-2 mx-2">
+                                    <p class="text-[#00AC4F] font-sans font-semibold text-xs  "><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 320 512" class="inline-block" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                            </path>
+                                        </svg> 0.25 ETH</p>
+                                </div>
+                                <div class="text-gray-500 text-sm flex items-center">
+                                    <p>1 of 8</p>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <button class="border-2 border-purple-900 rounded-full p-3">
+                                    Place a bid
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- small card -->
+                    <div class="flex flex-row space-x-3 space-y-2 mx-auto">
+                        <!-- left splash -->
+                        <div>
+                            <img src="images/unsplash2.webp" alt="">
+                        </div>
+                        <!--  right info -->
+                        <div class="flex flex-col">
+                            <div>
+                                <p class="font-sans text-xl font-semibold">The Futr Abstr</p>
+                            </div>
+                            <div class="flex flex-row">
+                                <div>
+                                    <img src="images/profile.webp" alt="" width="30px" height="30px">
+                                </div>
+                                <div class="border border-[#00AC4F] rounded py-1 px-2 mx-2">
+                                    <p class="text-[#00AC4F] font-sans font-semibold text-xs  "><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 320 512" class="inline-block" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                            </path>
+                                        </svg> 0.25 ETH</p>
+                                </div>
+                                <div class="text-gray-500 text-sm flex items-center">
+                                    <p>1 of 8</p>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <button class="border-2 border-purple-900 rounded-full p-3">
+                                    Place a bid
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- collection right side -->
+            <div class="">
+                <p class="uppercase text-xl font-extrabold mb-1">Top Collections over<!-- --> </p>
+                <p class="font-sans text-xl font-semibold text-[#3D00B7] ">Last 7 days</p>
+                <div class="grid">
+                    <!-- item -->
+                    <div class="flex flex-row items-center  justify-between space-x-14 border-b border-gray-400 py-3">
+                        <h1>1</h1>
+                        <div class="flex flex-row items-center">
+                            <img src="images/Group 108.webp" alt="">
+                            <div class="col-span-2">
+                                <p class="font-sans font-bold text-base">CryptoFunks</p>
+                                <p class="font-sans font-semibold text-sm text-[#636363]"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg> 19,769.39</p>
+                            </div>
+
+                        </div>
+                        <p class="font-sans font-bold text-base md:text-lg text-[#14C8B0]">+26.52%</p>
+                    </div>
+
+                    <!-- item -->
+                    <div class="flex flex-row items-center  justify-between space-x-14 border-b border-gray-400 py-3">
+                        <h1>1</h1>
+                        <div class="flex flex-row items-center">
+                            <img src="images/Group 108.webp" alt="">
+                            <div class="col-span-2">
+                                <p class="font-sans font-bold text-base">CryptoFunks</p>
+                                <p class="font-sans font-semibold text-sm text-[#636363]"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg> 19,769.39</p>
+                            </div>
+
+                        </div>
+                        <p class="font-sans font-bold text-base md:text-lg text-[#14C8B0]">+26.52%</p>
+                    </div>
+
+                    <!-- item -->
+                    <div class="flex flex-row items-center  justify-between space-x-14 border-b border-gray-400 py-3">
+                        <h1>1</h1>
+                        <div class="flex flex-row items-center">
+                            <img src="images/Group 108.webp" alt="">
+                            <div class="col-span-2">
+                                <p class="font-sans font-bold text-base">CryptoFunks</p>
+                                <p class="font-sans font-semibold text-sm text-[#636363]"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg> 19,769.39</p>
+                            </div>
+
+                        </div>
+                        <p class="font-sans font-bold text-base md:text-lg text-[#14C8B0]">+26.52%</p>
+                    </div>
+
+                    <!-- item -->
+                    <div class="flex flex-row items-center  justify-between space-x-14 border-b border-gray-400 py-3">
+                        <h1>1</h1>
+                        <div class="flex flex-row items-center">
+                            <img src="images/Group 108.webp" alt="">
+                            <div class="col-span-2">
+                                <p class="font-sans font-bold text-base">CryptoFunks</p>
+                                <p class="font-sans font-semibold text-sm text-[#636363]"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg> 19,769.39</p>
+                            </div>
+
+                        </div>
+                        <p class="font-sans font-bold text-base md:text-lg text-[#14C8B0]">+26.52%</p>
+                    </div>
+
+                    <!-- item -->
+                    <div class="flex flex-row items-center  justify-between space-x-14 py-3">
+                        <h1>1</h1>
+                        <div class="flex flex-row items-center">
+                            <img src="images/Group 108.webp" alt="">
+                            <div class="col-span-2">
+                                <p class="font-sans font-bold text-base">CryptoFunks</p>
+                                <p class="font-sans font-semibold text-sm text-[#636363]"><svg stroke="currentColor"
+                                        fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block"
+                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                        </path>
+                                    </svg> 19,769.39</p>
+                            </div>
+
+                        </div>
+                        <p class="font-sans font-bold text-base md:text-lg text-[#14C8B0]">+26.52%</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- section collection nfts -->
+        <section
+            class="flex flex-col space-y-8 py-12 mb-10 bg-[#D9E0EC33] rounded-lg shadow-xl items-center justify-center md:space-x-5 md:px-8">
+            <!-- upper text -->
+            <div class="flex justify-start md:justify-center">
+                <h1 class="text-black font-extrabold uppercase text-4xl text-center">Collection Featured NFTs</h1>
+            </div>
+
+            <!-- cards -->
+            <div class="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
+
+                <!-- card -->
+                <div class="flex flex-col">
+                    <!-- upper cards -->
+                    <div class="flex flex-row space-x-4 space-y-2">
+                        <!-- big img left -->
+                        <div>
+                            <img src="images/unsplash1.webp" alt="">
+                        </div>
+                        <!-- small imgs right -->
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <div>
+                                <img src="images/unsplash_9anj7QWy-2g.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_pVoEPpLw818.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_LpbyDENbQQg.webp" alt="" width="104px" height="86px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="flex flex-col space-y-2 mt-3">
+                        <p class="text-2xl text-black">Amazing Collection</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3"><img src="images/profile.webp" alt="" width="48px"
+                                    height="48px">
+                                <p class="font-sans font-bold">by Arkhan</p>
+                            </div><button
+                                class="border-2 border-[#2639ED] py-2 px-3 rounded-full text-[#2639ED] font-sans text-xs hover:bg-[#2639ED] hover:text-white">Total
+                                54 Items</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- card -->
+                <div class="flex flex-col">
+                    <!-- upper cards -->
+                    <div class="flex flex-row space-x-4">
+                        <!-- big img left -->
+                        <div>
+                            <img src="images/unsplash1.webp" alt="">
+                        </div>
+                        <!-- small imgs right -->
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <div>
+                                <img src="images/unsplash_9anj7QWy-2g.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_pVoEPpLw818.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_LpbyDENbQQg.webp" alt="" width="104px" height="86px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="flex flex-col  space-y-2 mt-3">
+                        <p class="text-2xl text-black">Amazing Collection</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3"><img src="images/profile.webp" alt="" width="48px"
+                                    height="48px">
+                                <p class="font-sans font-bold">by Arkhan</p>
+                            </div><button
+                                class="border-2 border-[#2639ED] py-2 px-3 rounded-full text-[#2639ED] font-sans text-xs hover:bg-[#2639ED] hover:text-white">Total
+                                54 Items</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="flex flex-col">
+                    <!-- upper cards -->
+                    <div class="flex flex-row space-x-4">
+                        <!-- big img left -->
+                        <div>
+                            <img src="images/unsplash1.webp" alt="">
+                        </div>
+                        <!-- small imgs right -->
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <div>
+                                <img src="images/unsplash_9anj7QWy-2g.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_pVoEPpLw818.webp" alt="" width="104px" height="86px">
+                            </div>
+
+                            <div>
+                                <img src="images/unsplash_LpbyDENbQQg.webp" alt="" width="104px" height="86px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- footer -->
+                    <div class="flex flex-col  space-y-2 mt-3">
+                        <p class="text-2xl text-black">Amazing Collection</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3"><img src="images/profile.webp" alt="" width="48px"
+                                    height="48px">
+                                <p class="font-sans font-bold">by Arkhan</p>
+                            </div><button
+                                class="border-2 border-[#2639ED] py-2 px-3 rounded-full text-[#2639ED] font-sans text-xs hover:bg-[#2639ED] hover:text-white">Total
+                                54 Items</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- signup section -->
+        <section class="flex flex-col md:flex-row">
+            <!-- left image -->
+            <div class="order-1 md:w-1/2">
+                <img src="images/Group 110.webp" alt="">
+            </div>
+            <!-- right section -->
+            <div class="md:w-1/2 order-2 flex flex-col space-y-4 justify-center pl-7 md:text-left">
+                <!-- title -->
+                <h1 class="text-black font-extrabold uppercase text-xl text-left">Collection Featured NFTs</h1>
+                <p class="text-gray-600 md:text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
+                    ac phasellus placerat a pellentesque tellus sed egestas. Et tristique dictum sit tristique sed non.
+                    Lacinia lorem id consectetur pretium diam ut. Pellentesque eu sit blandit fringilla risus faucibus.
+                </p>
+                <div class="text-center md:text-left"><button
+                        class="bg-[#3D00B7] border-2 border-[#3D00B7]  px-6 py-3 rounded-full font-sans font-semibold text-xl md:text-2xl text-white hover:text-black hover:bg-white">Sign
+                        Up Now</button></div>
+            </div>
+        </section>
+        <!-- nft container -->
+        <div id="nft-container" class="bg-[#D9E0EC33] py-5 md:py-20 p-0 md:p-3 mt-20 rounded-2xl">
+            <h1 class="text-4xl uppercase font-extrabold mb-10 text-center md:text-left">Discover more NFTs</h1>
+
+            <!-- Filter Controls -->
+            <div class="block md:flex justify-between">
+                <div class="flex flex-wrap  gap-2 items-center bg-white bg-opacity-10 rounded-full pb-5 md:gap-5">
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white  mixitup-control-active"
+                        data-filter="all">All Categories</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".art">Art</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".celebrities">Celebrities</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".gaming">Gaming</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".sport">Sport</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".music">Music</button>
+                    <button
+                        class="text-black font-sans mx-2 bg-[#b6bac033] my-1 text-sm md:text-base py-2 px-3 rounded-full filter-btn hover:bg-[#3D00B7] duration-150 hover:text-white"
+                        data-filter=".crypto">Crypto</button>
+                </div>
+            </div>
+
+            <!-- NFT Cards Container -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-5 md:gap-10 mt-8 mixitup-container">
+                <!-- Art Category Card -->
+                <div class="mix art bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Art Item 1</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]"><svg stroke="currentColor"
+                                fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="inline-block h-4"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z">
+                                </path>
+                            </svg> 0.25 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 129</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            3h 50m 2s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Celebrities Category Card -->
+                <div class="mix celebrities bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Celebrity NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.2 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 100</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            5h 20m 45s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Gaming Category Card -->
+                <div class="mix gaming bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Gaming NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">0.8 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 50</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            2h 15m 10s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Sport Category Card -->
+                <div class="mix sport bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Sport NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.5 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 80</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            4h 30m 20s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Sport Category Card -->
+                <div class="mix sport bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Sport NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.5 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 80</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            4h 30m 20s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Music Category Card -->
+                <div class="mix music bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Music NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">1.8 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 150</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            6h 10m 5s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Crypto Category Card -->
+                <div class="mix crypto bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Crypto NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">2.1 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 75</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            8h 5m 15s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Crypto Category Card -->
+                <div class="mix crypto bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Crypto NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">2.1 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 75</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            8h 5m 15s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+
+                <!-- Crypto Category Card -->
+                <div class="mix crypto bg-white p-1 md:p-2 m-0 md:m-2 rounded-md">
+                    <div class="relative"><img alt="card" loading="lazy" decoding="async" data-nimg="1"
+                            class="rounded-md w-full" src="images/image 1.webp" style="color: transparent;">
+                        <div class="flex -space-x-1 overflow-hidden absolute -bottom-3 left-5">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                            <img src="images/profile.webp" width="40" height="40" class="rounded-full" alt="">
+                        </div>
+                    </div>
+                    <p class="font-sans font-semibold text-base md:text-xl mt-5">Crypto NFT</p>
+                    <div class="flex items-center justify-between mt-2 mb-6">
+                        <p class="font-sans text-sm font-semibold text-[#00AC4F]">2.1 ETH</p>
+                        <p class="text-[#757575] text-sm font-sans">1 of 75</p>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between mt-3 items-center">
+                        <p class="text-[#5539A8] px-2 py-1 md:px-5 md:py-2 font-sans bg-[#F5F5F5] rounded-full text-xs">
+                            8h 5m 15s left</p>
+                        <p class="text-[#4F33A3] font-sans font-bold text-xs md:text-sm">Place a bid</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More NFTs Button -->
+            <div class="flex justify-center mt-10">
+                <button
+                    class="border-2 border-[#3D00B7] text-[#4F33A3] font-sans rounded-full py-3 px-5 hover:bg-[#220970] hover:text-white">
+                    More NFTs
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-24">
+            <div class="grid grid-cols-6 gap-10 justify-betweeen">
+                <div class="col-span-6 md:col-span-2">
+                    <p class="uppercase font-extrabold text-2xl">NFters</p>
+                    <p class="font-sans  text-base my-8 text-[#565656]">The world’s first and largest digital
+                        marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
+                        exclusive digital items.<!-- --> </p>
+                    <div class="flex gap-6 text-4xl"><button><svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 512 512" class="text-[#3B5998]" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                </path>
+                            </svg></button><button><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                </path>
+                            </svg></button><button><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 512 512" class="text-[#007AB9]" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z">
+                                </path>
+                            </svg></button></div>
+                </div>
+                <div class="col-span-3 md:col-span-1">
+                    <p class="font-sans font-semibold text-lg mb-4">Market Place</p>
+                    <div class="flex flex-col items-start  gap-2 font-sans text-base text-[#3D3D3D] font-medium"><button
+                            class="hover:text-blue-600">All NFTs</button><button
+                            class="hover:text-blue-600">New</button><button
+                            class="hover:text-blue-600">Art</button><button
+                            class="hover:text-blue-600">Sports</button><button
+                            class="hover:text-blue-600">Utility</button><button
+                            class="hover:text-blue-600">Music</button><button class="hover:text-blue-600">Domain
+                            Name</button></div>
+                </div>
+                <div class="col-span-3 md:col-span-1">
+                    <p class="font-sans font-semibold text-lg mb-4">My Account</p>
+                    <div class="flex flex-col items-start gap-2 font-sans text-base text-[#3D3D3D] font-medium"><button
+                            class="hover:text-blue-600">Profile</button><button
+                            class="hover:text-blue-600">Favorite</button><button class="hover:text-blue-600">My
+                            Collections</button><button class="hover:text-blue-600">Settings</button></div>
+                </div>
+                <div class="col-span-6 md:col-span-2">
+                    <p class="font-sans font-semibold text-lg mb-4">Stay in the loop</p>
+                    <p class="font-sans text-[#363639] text-base">Join our mailing list to stay in the loop with our
+                        newest feature releases, NFT drops, and tips and tricks for navigating NFTs.</p>
+                    <div class="relative max-w-lg mt-8"><label class="sr-only" for="email">Email</label><input
+                            class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
+                            id="email" type="email" placeholder="Enter your email address...."><button
+                            class="absolute end-1 font-sans top-1/2 -translate-y-1/2 rounded-full bg-[#2639ED] px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700">Subscibe
+                            Now</button></div>
+                </div>
+            </div>
+            <hr class="mt-20">
+        </div>
+        <!-- sidebar -->
+        <div id="blur" class="hidden absolute top-0 left-0 w-screen h-screen backdrop-blur transition duration-150">
+        </div>
+        <div id="mobile-menu"
+            class="backdrop-filter hidden absolute right-0 top-0 h-full shadow-2xl z-50 transition bg-white w-3/4 px-10 py-12 duration-150">
+            <div class="grid grid-flow-row gap-6">
+                <a href="#" class="text-black font-bold hover:underline">Marketplace</a>
+                <a href="#" class="text-black font-bold hover:underline">Resource</a>
+                <a href="#" class="text-black font-bold hover:underline">About</a>
+                <div class="flex flex-col gap-4">
+                    <button class="bg-purple-900 rounded-full text-white w-full py-2 hover:bg-purple-700 duration-150">
+                        Upload
+                    </button>
+
+                    <button
+                        class="border-2 border-purple-900 text-purple-900 hover:text-white hover:bg-purple-900 duration-150 rounded-full w-full py-2">
+                        Connect Wallet
+                    </button>
+                </div>
+            </div>
+            <button id="close-button" type="button"
+                class="backdrop-blur absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x h-4 w-4">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg><span class="sr-only">Close</span></button>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+
+    <script>
+        // Toggle the mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeToggle = document.getElementById('close-button');
+        const blurScreen = document.getElementById('blur')
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            blurScreen.classList.toggle('hidden');
+        });
+
+        closeToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            blurScreen.classList.add('hidden');
+        })
+
+        //numbers animation
+
+        function easeOutQuad(t) {
+            return t * (2 - t); // Easing function for ease-out effect
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000) {
+                return Math.floor(num / 1000) + 'k+'; // Format as k+ without decimal
+            }
+            return num.toString();
+        }
+
+        function animateNumber(element, target, duration) {
+            const start = 0;
+            const startTime = performance.now();
+
+            function update() {
+                const currentTime = performance.now();
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1); // Ensure progress does not exceed 1
+                const easedProgress = easeOutQuad(progress); // Apply easing function
+                const currentValue = Math.floor(start + (target - start) * easedProgress);
+
+                element.textContent = formatNumber(currentValue); // Format the number
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Start animations when the page loads
+        window.addEventListener('load', () => {
+            animateNumber(document.getElementById('artworkCount'), 98000, 2000);
+            animateNumber(document.getElementById('auctionCount'), 12000, 2000);
+            animateNumber(document.getElementById('artistCount'), 15000, 2000);
+        });
+
+        // mixitup
+
+        // Initialize MixItUp
+        var mixer = mixitup('.mixitup-container', {
+            animation: {
+                effects: 'fade scale(0.5) translateY(-20%)',
+                duration: 400
+            },
+            selectors: {
+                target: '.mix'
+            }
+        });
+    </script>
+</body>
+
+</html>
